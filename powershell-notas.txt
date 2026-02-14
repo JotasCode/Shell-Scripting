@@ -30,7 +30,7 @@ Laboratorio 3: Analizar: Get-Process -Name "Code" | Where-Object { $_.WorkingSet
 
 	Paso 2: Ejecutar en PowerShell Get-Process -Name "nombre-		proceso (sin el .exe)" | Where-Object { $_.WorkingSet -gt 		valor-numerico-unidad-almacenamiento }  | Select-Object 		variables-a-selecionar
 
-	Ejemplo: Get-Process -Name "firefox" | Where-Object { 			$_.WorkingSet -gt 200MB } | Select-Object Id, ProcessName
+	Ejemplo: Get-Process -Name "firefox" | Where-Object { 			$_.WorkingSet -gt 50MB } | Select-Object Id, ProcessName
 
 	Instrucción final: Hacer este ejercicio con todos los 			procesos listados en el comando tasklist.
 	 
