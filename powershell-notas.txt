@@ -1,0 +1,37 @@
+Get-Process -Name "Code" | Where-Object { $_.WorkingSet -gt 200MB } | Select-Object Id, ProcessName
+
+Laboratorio 1: Analizar: Get-Process -Name "Code"
+	Paso 1: Ejecutar en el cmd tasklist y elejir un proceso.
+
+	Paso 2: Ejecutar en PowerShell Get-Process -Name "nombre-		proceso (sin el .exe)"
+
+	Ejemplo: Get-Process -Name "firefox"
+
+	Instrucción final: Hacer este ejercicio con todos los 			procesos listados en el comando tasklist.
+
+	Entregable: Tomar captura de pantalla de cada ejecución y 		agregarla en un documento en PowerPoint para luego convertirlo 	en PDF para fines de evidencia. 
+
+
+Laboratorio 2: Analizar: Get-Process -Name "Code" | Where-Object { $_.WorkingSet -gt 200MB }
+
+	Paso 1: Ejecutar en el cmd tasklist y elejir un proceso.
+
+	Paso 2: Ejecutar en PowerShell Get-Process -Name "nombre-		proceso (sin el .exe)" | Where-Object { $_.WorkingSet -gt 		valor-numerico-unidad-almacenamiento }
+
+	Ejemplo: Get-Process -Name "firefox" | Where-Object { 			$_.WorkingSet -gt 200MB }
+
+	Instrucción final: Hacer este ejercicio con todos los 			procesos listados en el comando tasklist.
+	 
+	Entrgable: Tomar captura de pantalla de cada ejecución y 		agregarla en un documento en PowerPoint para luego convertirlo 	en PDF para fines de evidencia.
+
+Laboratorio 3: Analizar: Get-Process -Name "Code" | Where-Object { $_.WorkingSet -gt 200MB } | Select-Object Id, ProcessName
+
+	Paso 1: Ejecutar en el cmd tasklist y elejir un proceso.
+
+	Paso 2: Ejecutar en PowerShell Get-Process -Name "nombre-		proceso (sin el .exe)" | Where-Object { $_.WorkingSet -gt 		valor-numerico-unidad-almacenamiento }  | Select-Object 		variables-a-selecionar
+
+	Ejemplo: Get-Process -Name "firefox" | Where-Object { 			$_.WorkingSet -gt 200MB } | Select-Object Id, ProcessName
+
+	Instrucción final: Hacer este ejercicio con todos los 			procesos listados en el comando tasklist.
+	 
+	Entrgable: Tomar captura de pantalla de cada ejecución y 		agregarla en un documento en PowerPoint para luego convertirlo 	en PDF para fines de evidencia.
