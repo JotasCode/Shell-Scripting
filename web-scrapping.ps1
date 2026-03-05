@@ -23,11 +23,11 @@ function Start-SuperScraper {
 
         Write-Host "--- Iniciando scraping de: $Url ---" -ForegroundColor Cyan .\hola.ps1
 
-        # Petición Web
+        # Peticion Web
         $web = Invoke-WebRequest -Uri $Url -UserAgent $userAgent -UseBasicParsing -TimeoutSec 20
         $content = $web.Content 
 
-        # 2. Extracción de datos
+        # 2. Extraccion de datos
         $titles = [regex]::Matches($content, '(?<=<h[1-2][^>]*>)(.*?)(?=</h[1-2]>)') | ForEach-Object { $_.Value -replace '<[^>]+>', ''} | Select-Object -Unique -First 15
         $prices = [regex]::Matches($content, '(\$|USD|EUR|MXN|S/|PEN)\s?\d+([.,]\d{2})?') | Select-Object -ExpandProperty Value -Unique
         $emails = [regex]::Matches($content, '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}') | Select-Object -ExpandProperty Value -Unique
